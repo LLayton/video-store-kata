@@ -16,6 +16,15 @@ export class MovieConfiguration {
         this.additionaCostPerDay = additionaCostPerDay;
         this.additionalRenterPoint = additionalRenterPoint;
     }
+    public GetminRentDays():number{
+        return  this.minRentDays;
+    }
+    public GetadditionaCostPerDay():number{
+        return this.additionaCostPerDay;
+    }
+    public GetPrice():number{
+        return this.price;
+    }
     
 }
 export const newReleaseConfiguration: (title: string) => MovieConfiguration = (title:string)=>{

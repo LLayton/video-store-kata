@@ -2,14 +2,6 @@ import {compose} from "../compose";
 import { MoviePrices } from "./VideoStore/MoviePrices";
 import { Rental } from "./VideoStore/Rental";
 
-const calculateAdditionalCost = (rental: Rental): MoviePrices => {
-    let additionalCost = 0.0;
-    if (rental.rentalDays > rental.mc.minRentDays) {
-        const additionalDays = rental.rentalDays - rental.mc.minRentDays
-        additionalCost = rental.mc.additionaCostPerDay * additionalDays;
-    }
-    return new MoviePrices(additionalCost, rental.mc.price);
-}
 
 const calculatePrice = (moviePrices: MoviePrices): number =>
      moviePrices.movieBasePrice + moviePrices.additionalCost
