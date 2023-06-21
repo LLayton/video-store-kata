@@ -1,8 +1,5 @@
-import {
-    childrenConfiguration,
-    newReleaseConfiguration,
-    Rental
-} from "../../../source/domain/movie/videoStore"
+import { Rental } from "../../../source/domain/movie/VideoStore/Rental";
+import { childrenConfiguration, newReleaseConfiguration } from "../../../source/domain/movie/VideoStore/MovieConfiguration";
 import {calculateRentalPoints} from "../../../source/domain/movie/rentPoint";
 
 describe('Renter Points', function () {

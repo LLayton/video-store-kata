@@ -1,4 +1,5 @@
-import {newReleaseConfiguration, Rental} from "./domain/movie/videoStore";
+import { newReleaseConfiguration } from './domain/movie/VideoStore/MovieConfiguration';
+import { Rental } from './domain/movie/VideoStore/Rental';
 import {printHtmlReceipt} from './infrastructure/htmlReceipt';
 import {printTextReceipt} from "./infrastructure/textReceipt";
 

@@ -1,27 +1,9 @@
-export class MoviePrices {
-    additionalCost: number;
-    movieBasePrice: number;
-
-    constructor(additionalCost: number, movieBasePrice: number) {
-        this.additionalCost = additionalCost;
-        this.movieBasePrice = movieBasePrice;
-    }
-}
-export class Rental {
-    rentalDays: number;
-    mc: MovieConfiguration;
-
-    constructor(rentalDays: number, m: MovieConfiguration) {
-        this.rentalDays = rentalDays;
-        this.mc = m;
-    }
-}
 export class MovieConfiguration {
-    title: string;
-    price: number;
-    minRentDays: number;
-    additionaCostPerDay: number;
-    additionalRenterPoint: number;
+    private title: string;
+    private price: number;
+    private minRentDays: number;
+    private additionaCostPerDay: number;
+    private additionalRenterPoint: number;
 
     constructor(title: string,
                 price: number,
@@ -34,6 +16,7 @@ export class MovieConfiguration {
         this.additionaCostPerDay = additionaCostPerDay;
         this.additionalRenterPoint = additionalRenterPoint;
     }
+    
 }
 export const newReleaseConfiguration: (title: string) => MovieConfiguration = (title:string)=>{
     return  new MovieConfiguration(title,3.0,1,3.0,1)

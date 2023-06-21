@@ -1,10 +1,7 @@
-import {
-    childrenConfiguration,
-    newReleaseConfiguration,
-    Rental
-} from "../../../source/domain/movie/videoStore"
-import {calculateSingleMoviePrice} from "../../../source/domain/movie/price";
 
+import { childrenConfiguration, newReleaseConfiguration } from "../../../source/domain/movie/VideoStore/MovieConfiguration";
+import { Rental } from "../../../source/domain/movie/VideoStore/Rental";
+import {calculateSingleMoviePrice} from "../../../source/domain/movie/price";
 describe('Movie', function () {
 
     it('rent new release movie one day', () => {
